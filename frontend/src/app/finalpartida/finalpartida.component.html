@@ -1,0 +1,40 @@
+<div class="container text-center">
+  <div class="card">
+    <div class="card-body text-center cuadro">
+      <h2>¡Juego Terminado!</h2>
+      <p>Puntuación de esta partida: <strong>{{ puntos }}</strong></p>
+      <div class="formulario-nombre">
+        <form (submit)="onSubmit()">
+          <input type="text" [(ngModel)]="newPuntuacion.nombre" placeholder="Introduce tu nombre" name="nombre" required>
+          <button *ngIf="!botonDeshabilitado" type="submit" class="button-85">Guardar</button>
+        </form>        
+      </div>
+      <div class="botonvolver">
+        <a class="button-85" (click)="volver()">Volver a jugar</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="cuadrodos">
+  <h3 class="mb-4">Top 5</h3>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Puntuación</th>
+        <th>Nombre</th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let puntuacion of puntuaciones">
+        <td>{{ puntuacion.puntuacion }}</td>
+        <td>{{ puntuacion.nombre }}</td>
+        <td>
+          <button class="button-31" role="button" (click)="eliminarPuntuacion(puntuacion.id)">Eliminar</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

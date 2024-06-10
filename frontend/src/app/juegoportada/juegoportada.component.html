@@ -1,0 +1,39 @@
+<div class="container mt-5" >
+    <div class="card">
+      <div class="d-flex justify-content-between p-3">
+        <div class="imagen">
+          <img src="assets\G.png" width="90" alt="logo">
+        </div>
+        <div class="quiz-header">
+          <h4>Descubre el juego con el fragmento de la portada y gana.</h4>
+          <span style="font-style: italic">¡Que la fortuna esté de tu lado!</span>
+        </div>        
+      </div>
+      <div class="d-flex justify-content-around py-3">
+        <div class="score">
+          <h5>{{puntos}} Points</h5>
+        </div>
+        <div></div>
+        <div class="question-remain">
+            <span style="font-style: italic;"> {{vidas}} vidas </span>
+        </div>
+      </div>
+      <div class="question">
+        <div class="card" [ngClass]="{'acierto': acierto, 'fallo': fallo}">
+            <div class="imagen">
+                <img src="{{juegoVerdadero.thumbnail}}" alt="Portada del juego">
+            </div>
+        </div>
+      </div>
+      <div class="options" >
+        <ol>
+          <li *ngFor="let juego of juegos" (click)="verificarRespuesta(juego)">
+            <div class="card">
+              {{juego.title}}
+            </div>
+          </li>
+        </ol>
+      </div>
+    </div>
+  </div>
+  

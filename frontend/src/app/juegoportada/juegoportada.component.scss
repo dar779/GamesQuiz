@@ -1,0 +1,42 @@
+.card{
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 10px;
+}
+li{
+    list-style-type: none;
+    cursor: pointer;
+    margin: 10px 0;
+}
+li .card:hover{
+    border: 1px solid blue;
+}
+ol{
+    padding: 0;
+}
+.acierto {
+    border: 2px solid green; 
+    background-color: #d4edda; 
+}
+  
+.fallo {
+    border: 2px solid red; 
+    background-color: #f8d7da; 
+}
+  
+.question .imagen img {
+    width: 100%; /* Ajusta el ancho al 100% del contenedor padre */
+    max-width: 500px; /* Establece un ancho máximo para la imagen */
+    height: auto; /* Mantiene la proporción de la imagen */
+    display: block; /* Hace que la imagen sea un bloque para centrarla */
+    margin: 0 auto; /* Centra la imagen horizontalmente */
+    filter: blur(10px);
+}
+
+.acierto .imagen img {
+    filter: blur(0px); /* Elimina el desenfoque cuando hay un acierto */
+}
+
+.fallo .imagen img {
+    filter: blur(0px); /* Mantiene el desenfoque cuando hay un fallo */
+}
