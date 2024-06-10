@@ -1,0 +1,29 @@
+{
+  "puntuaciones": [
+    {
+      "id": "905c",
+      "nombre": "Ya va fino, señoreh",
+      "puntuacion": 30
+    },
+    {
+      "id": "1f58",
+      "nombre": "Apruebame",
+      "puntuacion": 50
+    },
+    {
+      "id": "dacf",
+      "nombre": "AAA",
+      "puntuacion": 60
+    },
+    {
+      "id": "bbcb",
+      "nombre": "Prueba",
+      "puntuacion": 0
+    },
+    {
+      "id": "1708",
+      "nombre": "Clase",
+      "puntuacion": 20
+    }
+  ]
+}
