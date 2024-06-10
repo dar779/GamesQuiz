@@ -1,0 +1,33 @@
+<div class="container mt-5 text-center">
+  <h2>Lista de Juegos</h2>
+  <div class="d-flex justify-content-center mb-3">
+    <button class="btn btn-outline-primary mx-1 button-84" (click)="cambiarOrden('id')">Ordenar por ID {{ ordenActual === 'id' ? (direccionOrden === 'asc' ? '↑' : '↓') : '' }}</button>
+    <button class="btn btn-outline-primary mx-1 button-84" (click)="cambiarOrden('title')">Ordenar por Título {{ ordenActual === 'title' ? (direccionOrden === 'asc' ? '↑' : '↓') : '' }}</button>
+    <button class="btn btn-outline-primary mx-1 button-84" (click)="cambiarOrden('genre')">Ordenar por Género {{ ordenActual === 'genre' ? (direccionOrden === 'asc' ? '↑' : '↓') : '' }}</button>
+    <button class="btn btn-outline-primary mx-1 button-84" (click)="cambiarOrden('platform')">Ordenar por Plataforma {{ ordenActual === 'platform' ? (direccionOrden === 'asc' ? '↑' : '↓') : '' }}</button>
+    <button class="btn btn-outline-primary mx-1 button-84" (click)="cambiarOrden('developer')">Ordenar por Desarrollador {{ ordenActual === 'developer' ? (direccionOrden === 'asc' ? '↑' : '↓') : '' }}</button>
+    <button class="btn btn-outline-primary mx-1 button-84" (click)="cambiarOrden('release_date')">Ordenar por Fecha {{ ordenActual === 'release_date' ? (direccionOrden === 'asc' ? '↑' : '↓') : '' }}</button>
+  </div>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Título</th>
+        <th>Género</th>
+        <th>Plataforma</th>
+        <th>Desarrollador</th>
+        <th>Fecha de Lanzamiento</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let juego of juegos">
+        <td>{{ juego.id }}</td>
+        <td>{{ juego.title }}</td>
+        <td>{{ juego.genre }}</td>
+        <td>{{ juego.platform }}</td>
+        <td>{{ juego.developer }}</td>
+        <td>{{ juego.release_date }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
